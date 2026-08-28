@@ -1,0 +1,131 @@
+# Structured site content, rendered by the custom layouts.
+
+profile:
+  name: "Charan Raj Kandula"
+  role: "Full-Stack Engineer"
+  tagline: "I build production AI platforms — LLM agent infrastructure, multi-tenant SaaS, and secure agent tooling."
+  intro: "Full-stack engineer with 5+ years shipping production AI SaaS end to end: React/Next.js and TypeScript frontends, Node.js and Python microservices, and LLM agent infrastructure on GCP and Cloudflare. I own systems from architecture through deployment."
+  location: "Jersey City, NJ"
+  email: "kandulacharanraj@gmail.com"
+  photo: "/images/profile.png"
+  resume: "/files/Charan_Raj_Kandula_Resume.pdf"
+
+socials:
+  - name: GitHub
+    url: "https://github.com/rajkandula"
+    icon: github
+  - name: LinkedIn
+    url: "https://www.linkedin.com/in/kandula-charan-raj"
+    icon: linkedin
+  - name: X
+    url: "https://x.com/CharanRaj862125"
+    icon: x
+  - name: YouTube
+    url: "https://www.youtube.com/@create-develop"
+    icon: youtube
+  - name: Website
+    url: "https://charan-raj-kandula.com"
+    icon: globe
+
+focus:
+  - title: "AI platform engineering"
+    body: "LLM gateways, multi-agent orchestration, vector and memory stores, and MCP-based tool integration running in production."
+    icon: cpu
+  - title: "Full-stack product delivery"
+    body: "Next.js and TypeScript on serverless Cloudflare Workers — D1, R2, KV, Vectorize, Stream — from design through production deploy."
+    icon: layers
+  - title: "Platform foundations"
+    body: "Multi-tenant RBAC and API keys, Stripe subscriptions and Connect payouts, and public developer platforms (SDK, CLI, REST API)."
+    icon: shield
+
+skills:
+  - group: "Languages & Frameworks"
+    items: ["TypeScript", "JavaScript", "Python", "React", "Next.js", "Node.js", "Electron", "REST APIs"]
+  - group: "Cloud & Data"
+    items: ["Google Cloud Platform", "Cloudflare Workers", "D1", "R2", "KV", "Vectorize", "MongoDB", "PostgreSQL", "Docker", "CI/CD"]
+  - group: "AI & Systems"
+    items: ["LLM integration", "Multi-agent systems", "MCP", "Vector search", "System design", "Microservices", "Kafka", "OAuth2", "RBAC", "Stripe"]
+
+experience:
+  - company: "Harakumo"
+    role: "Full Stack Engineer"
+    location: "New York, NY"
+    period: "Nov 2024 — Present"
+    current: true
+    bullets:
+      - "Own end-to-end delivery of full-stack features in Next.js/TypeScript on serverless Cloudflare Workers, spanning D1, R2, KV, Vectorize, and Stream."
+      - "Designed and built the platform's multi-tenant auth layer: organization-level RBAC, API keys, and email OTP verification."
+      - "Implemented Stripe billing end to end — subscriptions, Connect marketplace payouts, and webhook processing for payment lifecycle events."
+      - "Shipped the public developer platform (SDK, CLI, REST API, docs) for external partner integrations."
+      - "Built core AI platform features in production: an AI gateway, agents, and vector/memory stores."
+  - company: "Emberleaf Books"
+    role: "Senior Software Engineer"
+    location: "New York City Metro"
+    period: "Jun 2023 — Oct 2024"
+    bullets:
+      - "Architected and shipped production AI SaaS features across the full stack (Next.js, React, Node.js, Python)."
+      - "Designed the multi-agent LLM orchestration pipelines behind the product's AI-assisted content generation."
+      - "Built scalable backend microservices with MongoDB on GCP, using Cloudflare for global caching and edge delivery."
+      - "Led cross-platform expansion from web to desktop (Electron, macOS/Windows) on shared REST APIs and schemas."
+  - company: "BibleWrite"
+    role: "Software Engineer Intern"
+    location: "New Jersey"
+    period: "Jan 2023 — May 2023"
+    bullets:
+      - "Built Python and Node.js middleware integrating LLM APIs, with React components streaming model responses in real time."
+      - "Implemented request caching and payload optimization to manage rate limits and reduce token usage."
+  - company: "Stevens Institute of Technology"
+    role: "Graduate Research Assistant, AI/ML"
+    location: "Hoboken, NJ"
+    period: "Jan 2022 — May 2022"
+    bullets:
+      - "Built Python data-processing pipelines and benchmarked classical ML against transformer models on standard NLP benchmarks, measuring accuracy and latency trade-offs."
+  - company: "Chanova Labs"
+    role: "Software Engineer (Intern to Full-Time)"
+    location: "Hyderabad, India"
+    period: "Jan 2019 — Dec 2021"
+    bullets:
+      - "Shipped full-stack features across client projects using React, Node.js, and Python REST APIs with PostgreSQL, including third-party payment integrations, deployed to GCP via CI/CD."
+      - "Converted from intern to full-time after building consumer-facing Android interfaces from Figma wireframes."
+
+education:
+  - school: "Stevens Institute of Technology"
+    degree: "M.S., Computer Science"
+    location: "Hoboken, NJ"
+    period: "Jan 2022 — May 2023"
+  - school: "Mahatma Gandhi Institute of Technology"
+    degree: "B.Tech, Computer Science"
+    location: "Hyderabad, India"
+    period: "Jun 2016 — Oct 2020"
+
+projects:
+  - name: "MCP Security Gateway"
+    blurb: "Zero-trust access control for LLM agents. A centralized MCP proxy enforcing RBAC and OAuth2 scope verification on agent tool calls, with sandboxed execution in ephemeral Docker containers and Kafka-based audit logging."
+    tags: ["Python", "FastAPI", "Docker", "Kafka", "OAuth2"]
+    featured: true
+  - name: "AI Video Generation Pipeline"
+    blurb: "Automated documentary-style video production: GPT narration, TTS, Whisper subtitles, and programmatic stitching, with GCS storage and CI for reliability."
+    tags: ["Python", "OpenAI", "MoviePy", "GCP"]
+    featured: true
+  - name: "ComicCraft"
+    blurb: "AI comic generation platform with auth, a credits and payments system, and DALL·E image synthesis. Deployed on Cloud Run and Vercel with GitHub Actions CI/CD."
+    tags: ["Next.js", "Node", "MongoDB", "GCP"]
+    featured: true
+  - name: "Medical Records Wallet"
+    blurb: "Patient-owned record storage with OCR search, time-limited shareable links, audit logs, encryption at rest, and role-based access on a HIPAA-aware design."
+    tags: ["MERN", "Object storage", "OCR"]
+  - name: "Personal Finance Tracker"
+    blurb: "Budgets, categories, recurring expenses, CSV import/export, and charts, with optimistic updates, pagination, JWT auth, and role-based access."
+    tags: ["Next.js", "TypeScript", "MongoDB", "TanStack Query"]
+  - name: "Job Application Tracker"
+    blurb: "Pipeline statuses, filtering and sort, CSV export, Server Actions for mutations, optimistic UI, keyboard shortcuts, and light/dark mode."
+    tags: ["Next.js", "TypeScript", "Zod", "Tailwind"]
+  - name: "Learning Management System"
+    blurb: "Led a team of 6 building an LMS serving 500+ students — REST backend, GridFS file storage, responsive UI, and ETL for student data."
+    tags: ["Node.js", "Express", "MongoDB", "GridFS"]
+  - name: "Notes & Kanban"
+    blurb: "Boards, columns, and cards with drag and drop, labels, search, pagination, role-based auth, rate limiting, tests, and admin metrics."
+    tags: ["React", "Node", "Express", "JWT"]
+  - name: "University Android App"
+    blurb: "Resume builder, GPA calculator, and cloud document storage. 10K+ installs at a 4.5-star rating, with ~50% engagement lift from UX and crash work."
+    tags: ["Java", "Firebase", "Material Design"]

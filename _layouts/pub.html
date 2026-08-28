@@ -1,0 +1,21 @@
+---
+layout: base
+---
+<div class="wrap page-head">
+  <span class="pub__venue">{{ page.venue }} · {{ page.date | date: "%B %Y" }}</span>
+  <h1 style="margin-top:10px">{{ page.title }}</h1>
+</div>
+<div class="wrap" style="padding-bottom:56px">
+  <div class="prose">
+    {{ content }}
+    {% if page.paperurl %}
+    <div class="btns" style="margin-top:28px">
+      <a class="btn btn--primary" href="{{ page.paperurl }}">{% include icon.html name="doc" %} Download PDF</a>
+    </div>
+    {% endif %}
+    {% if page.citation %}
+    <h2>Citation</h2>
+    <p style="color:var(--text-muted);font-size:.93rem">{{ page.citation }}</p>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,121 @@
+---
+layout: base
+---
+{% assign c = site.data.content %}
+
+<section class="hero">
+  <div class="wrap hero__grid">
+    <div>
+      <span class="hero__eyebrow"><span class="dot"></span> Open to opportunities</span>
+      <h1>{{ c.profile.name }}<br><span class="hero__role">{{ c.profile.role }}</span></h1>
+      <p class="hero__tag">{{ c.profile.tagline }}</p>
+
+      <div class="hero__meta">
+        <span>{% include icon.html name="pin" %} {{ c.profile.location }}</span>
+        <a href="mailto:{{ c.profile.email }}">{% include icon.html name="mail" %} {{ c.profile.email }}</a>
+      </div>
+
+      <div class="btns">
+        <a class="btn btn--primary" href="{{ '/cv/' | relative_url }}">View experience {% include icon.html name="arrow" %}</a>
+        <a class="btn" href="{{ '/portfolio/' | relative_url }}">Projects</a>
+        <a class="btn" href="mailto:{{ c.profile.email }}">Get in touch</a>
+      </div>
+
+      <div class="socials">
+        {% for s in c.socials %}
+          <a href="{{ s.url }}" aria-label="{{ s.name }}" rel="me noopener" target="_blank">{% include icon.html name=s.icon %}</a>
+        {% endfor %}
+      </div>
+    </div>
+    <img class="hero__photo" src="{{ c.profile.photo | relative_url }}" alt="{{ c.profile.name }}" width="190" height="190">
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <h2>What I do</h2>
+      <p>{{ c.profile.intro }}</p>
+    </div>
+    <div class="grid grid--3">
+      {% for f in c.focus %}
+      <article class="card">
+        <div class="card__ico">{% include icon.html name=f.icon %}</div>
+        <h3>{{ f.title }}</h3>
+        <p>{{ f.body }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head"><h2>Experience</h2></div>
+    <div class="tl">
+      {% for job in c.experience limit: 3 %}
+      <div class="tl__item{% if job.current %} is-current{% endif %}">
+        <div class="tl__head">
+          <span class="tl__role">{{ job.role }}</span>
+          <span class="tl__co">· {{ job.company }}</span>
+        </div>
+        <div class="tl__meta">{{ job.period }} · {{ job.location }}</div>
+        <ul>{% for b in job.bullets limit: 3 %}<li>{{ b }}</li>{% endfor %}</ul>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="btns" style="margin-top:28px">
+      <a class="btn" href="{{ '/cv/' | relative_url }}">Full experience {% include icon.html name="arrow" %}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <h2>Selected projects</h2>
+      <p>Things I have designed and shipped.</p>
+    </div>
+    <div class="grid grid--3">
+      {% for p in c.projects %}{% if p.featured %}
+      <article class="card proj">
+        <div class="proj__top"><h3>{{ p.name }}</h3></div>
+        <p>{{ p.blurb }}</p>
+        <div class="tags">{% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>
+      </article>
+      {% endif %}{% endfor %}
+    </div>
+    <div class="btns" style="margin-top:28px">
+      <a class="btn" href="{{ '/portfolio/' | relative_url }}">All projects {% include icon.html name="arrow" %}</a>
+    </div>
+  </div>
+</section>
+
+{% assign pubs = site.publications | sort: "date" | reverse %}
+{% if pubs.size > 0 %}
+<section class="section">
+  <div class="wrap">
+    <div class="section__head"><h2>Writing &amp; research</h2></div>
+    {% for pub in pubs limit: 1 %}
+    <a class="pub" href="{{ pub.url | relative_url }}">
+      <span class="pub__venue">{{ pub.venue }} · {{ pub.date | date: "%Y" }}</span>
+      <h3>{{ pub.title }}</h3>
+      <p>{{ pub.excerpt | strip_html | truncate: 240 }}</p>
+      <span class="pub__more">Read more {% include icon.html name="arrow" %}</span>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head"><h2>Toolkit</h2></div>
+    {% for s in c.skills %}
+    <div class="skill">
+      <h3>{{ s.group }}</h3>
+      <div class="tags">{% for i in s.items %}<span class="tag">{{ i }}</span>{% endfor %}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

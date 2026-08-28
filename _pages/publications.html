@@ -1,0 +1,22 @@
+---
+layout: base
+title: "Writing"
+permalink: /publications/
+---
+<div class="wrap page-head">
+  <h1>Writing &amp; research</h1>
+  <p>Papers and longer-form work.</p>
+</div>
+<div class="wrap" style="padding-bottom:56px">
+  <div class="grid" style="margin-top:30px">
+    {% assign pubs = site.publications | sort: "date" | reverse %}
+    {% for pub in pubs %}
+    <a class="pub" href="{{ pub.url | relative_url }}">
+      <span class="pub__venue">{{ pub.venue }} · {{ pub.date | date: "%B %Y" }}</span>
+      <h3>{{ pub.title }}</h3>
+      <p>{{ pub.excerpt | strip_html | truncate: 280 }}</p>
+      <span class="pub__more">Read more {% include icon.html name="arrow" %}</span>
+    </a>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title and page.url != "/" %}{{ page.title }} · {{ site.data.content.profile.name }}{% else %}{{ site.data.content.profile.name }} — {{ site.data.content.profile.role }}{% endif %}</title>
+<meta name="description" content="{{ page.excerpt | default: site.data.content.profile.tagline | strip_html | strip_newlines | truncate: 200 }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="{{ page.title | default: site.data.content.profile.name }}">
+<meta property="og:description" content="{{ page.excerpt | default: site.data.content.profile.tagline | strip_html | strip_newlines | truncate: 200 }}">
+<meta property="og:url" content="{{ page.url | absolute_url }}">
+<meta property="og:image" content="{{ '/images/profile.png' | absolute_url }}">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" type="image/png" sizes="32x32" href="{{ '/images/favicon-32x32.png?v=2' | relative_url }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ '/images/favicon-16x16.png?v=2' | relative_url }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ '/images/apple-touch-icon.png?v=2' | relative_url }}">
+<link rel="shortcut icon" href="{{ '/images/favicon.ico?v=2' | relative_url }}">
+<link rel="manifest" href="{{ '/images/manifest.json?v=2' | relative_url }}">
+<meta name="theme-color" content="#0a0f1c">
+
+<script>
+  // Set the theme before first paint so there is no flash.
+  (function () {
+    try {
+      var saved = localStorage.getItem("theme");
+      var dark = saved ? saved === "dark"
+                       : window.matchMedia("(prefers-color-scheme: dark)").matches;
+      document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+    } catch (e) {}
+  })();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+</head>
+
+<body>
+<header class="nav">
+  <nav class="wrap nav__in" aria-label="Main">
+    <a class="nav__brand" href="{{ '/' | relative_url }}">{{ site.data.content.profile.name }}</a>
+    <div class="nav__links">
+      {% assign navs = "/,Home|/portfolio/,Projects|/cv/,Experience|/publications/,Writing" | split: "|" %}
+      {% for n in navs %}
+        {% assign parts = n | split: "," %}
+        <a href="{{ parts[0] | relative_url }}"{% if page.url == parts[0] %} class="is-active" aria-current="page"{% endif %}>{{ parts[1] }}</a>
+      {% endfor %}
+      <button class="themebtn" id="themebtn" type="button" aria-label="Toggle colour theme">
+        <span class="ico--sun">{% include icon.html name="sun" %}</span>
+        <span class="ico--moon">{% include icon.html name="moon" %}</span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<main id="main">
+  {{ content }}
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <span>© {{ site.time | date: "%Y" }} {{ site.data.content.profile.name }}</span>
+    <div class="socials">
+      {% for s in site.data.content.socials %}
+        <a href="{{ s.url }}" aria-label="{{ s.name }}"{% unless s.url contains 'mailto' %} rel="me noopener" target="_blank"{% endunless %}>{% include icon.html name=s.icon %}</a>
+      {% endfor %}
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("themebtn").addEventListener("click", function () {
+    var root = document.documentElement;
+    var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", next);
+    try { localStorage.setItem("theme", next); } catch (e) {}
+  });
+</script>
+</body>
+</html>

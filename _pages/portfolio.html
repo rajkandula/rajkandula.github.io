@@ -1,14 +1,24 @@
 ---
-layout: archive
-title: "Portfolio"
+layout: base
+title: "Projects"
 permalink: /portfolio/
-author_profile: true
 ---
-
-{% include base_path %}
-
-
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
-
+{% assign c = site.data.content %}
+<div class="wrap page-head">
+  <h1>Projects</h1>
+  <p>Production platforms, tooling, and things built to scratch an itch.</p>
+</div>
+<div class="wrap" style="padding-bottom:56px">
+  <div class="grid grid--2" style="margin-top:30px">
+    {% for p in c.projects %}
+    <article class="card proj">
+      <div class="proj__top">
+        <h3>{{ p.name }}</h3>
+        {% if p.featured %}<span class="star">Featured</span>{% endif %}
+      </div>
+      <p>{{ p.blurb }}</p>
+      <div class="tags">{% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>
+    </article>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,59 @@
+---
+layout: base
+title: "Experience"
+permalink: /cv/
+redirect_from:
+  - /resume
+---
+{% assign c = site.data.content %}
+<div class="wrap page-head">
+  <h1>Experience</h1>
+  <p>{{ c.profile.intro }}</p>
+  <div class="btns" style="margin-top:22px">
+    <a class="btn btn--primary" href="mailto:{{ c.profile.email }}">{% include icon.html name="mail" %} Get in touch</a>
+    <a class="btn" href="{{ c.profile.resume | relative_url }}">{% include icon.html name="doc" %} Download résumé</a>
+    <a class="btn" href="https://www.linkedin.com/in/kandula-charan-raj">{% include icon.html name="linkedin" %} LinkedIn</a>
+  </div>
+</div>
+
+<section class="section" style="margin-top:34px">
+  <div class="wrap">
+    <div class="section__head"><h2>Work</h2></div>
+    <div class="tl">
+      {% for job in c.experience %}
+      <div class="tl__item{% if job.current %} is-current{% endif %}">
+        <div class="tl__head">
+          <span class="tl__role">{{ job.role }}</span>
+          <span class="tl__co">· {{ job.company }}</span>
+        </div>
+        <div class="tl__meta">{{ job.period }} · {{ job.location }}</div>
+        <ul>{% for b in job.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head"><h2>Education</h2></div>
+    {% for e in c.education %}
+    <div class="edu">
+      <div><strong>{{ e.degree }}</strong><span>{{ e.school }} · {{ e.location }}</span></div>
+      <div class="edu__when">{{ e.period }}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section__head"><h2>Toolkit</h2></div>
+    {% for s in c.skills %}
+    <div class="skill">
+      <h3>{{ s.group }}</h3>
+      <div class="tags">{% for i in s.items %}<span class="tag">{{ i }}</span>{% endfor %}</div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
