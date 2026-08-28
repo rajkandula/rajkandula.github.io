@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Charan Raj Kandula — Front-end Developer"
+title                    : "Charan Raj Kandula — Full-Stack Engineer"
 title_separator          : "-"
 name                     : &name "Charan Raj Kandula"
-description              : &description "Front-end developer building performant, accessible web apps with React and Next.js"
+description              : &description "Full-stack engineer building production AI SaaS platforms, LLM agent infrastructure, and secure agent tooling."
 url                      : https://rajkandula.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "rajkandula/rajkandula.github.io"
@@ -73,7 +73,7 @@ social:
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
+  provider               :  false # false (default), "google", "google-universal", "custom"
   google:
     tracking_id          :
 
@@ -82,9 +82,9 @@ analytics:
 author:
   name             : "Charan Raj Kandula"
   avatar           : "profile.png"
-  bio              : "Front-end developer focused on accessible, production-ready React and Next.js experiences."
+  bio              : "Full-stack engineer building production AI platforms — LLM agents, multi-tenant SaaS, and secure agent tooling (MCP)."
   location         : "Jersey City, NJ"
-  employer         : "Open to front-end opportunities"
+  employer         : "Harakumo"
   pubmed           :
   googlescholar    :
   email            : "kandulacharanraj@gmail.com"
@@ -109,11 +109,11 @@ author:
   stackoverflow    :
   steam            :
   tumblr           :
-  twitter          :
+  twitter          : "CharanRaj862125"
   vine             :
   weibo            :
   xing             :
-  youtube          :
+  youtube          : "@create-develop"
   wikipedia        :
 
 

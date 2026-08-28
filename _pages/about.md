@@ -1,28 +1,28 @@
 ---
 permalink: /
 title: "Charan Raj Kandula"
-excerpt: "Front-end developer shipping accessible, production-ready React and Next.js experiences."
+excerpt: "Full-stack engineer building production AI SaaS platforms, LLM agent infrastructure, and secure agent tooling."
 author_profile: true
 redirect_from:
   - /about/
   - /about.html
 ---
 
-Hi, I'm Charan — a front-end developer who ships responsive, accessible user interfaces for the web. I build React and Next.js experiences that balance beautiful presentation with measurable performance improvements. I've delivered product features used by 10K+ people, introduced component systems for faster iteration, and kept releases predictable with CI/CD automation.
+Hi, I'm Charan — a full-stack engineer with 5+ years designing and shipping production AI SaaS platforms end to end. I work across React/Next.js and TypeScript frontends, Node.js and Python microservices, and LLM agent infrastructure on GCP and Cloudflare.
 
-I love taking complex product requirements and distilling them into intuitive interactions. Recent wins include improving API-driven data views for 3D medical models, designing mobile-ready task flows, and cutting load times by up to 50% through thoughtful caching and pagination. When I'm not iterating on UI polish, you'll find me prototyping accessibility tests across devices or exploring creative AI tooling for storytellers.
+I own systems from architecture through deployment: multi-tenant auth, payments, and serverless, event-driven backends. My focus is scalable system design, distributed systems, and secure AI-agent tooling built on MCP.
 
 Core focus areas
 ======
-* **Production-grade React/Next.js** — Server Components, App Router, Server Actions, TanStack Query, and testing resilient UI flows.
-* **Performance and accessibility** — Profiling bundle size, optimizing data fetching, and ensuring AA+ experiences across devices.
-* **Product collaboration** — Partnering with designers, PMs, and QA to deliver polished UI, backed by telemetry and user testing.
+* **AI platform engineering** — LLM gateways, multi-agent orchestration, vector and memory stores, and MCP-based tool integration running in production.
+* **Full-stack product delivery** — Next.js/TypeScript on serverless Cloudflare Workers (D1, R2, KV, Vectorize, Stream), from design through production deploy.
+* **Platform foundations** — Multi-tenant RBAC and API keys, Stripe subscriptions and Connect marketplace payouts, and public developer platforms (SDK, CLI, REST API).
 
 Currently
 ------
-* **UI/UX Developer Intern @ Neuron 3D** — building interactive controls for complex 3D model workflows, improving data fetching speed, and maintaining CI/CD pipelines.
-* Exploring junior front-end roles where I can continue crafting delightful, performant interfaces.
+* **Full Stack Engineer @ Harakumo** — building the AI gateway, agents, and vector/memory stores, plus the platform's multi-tenant auth layer and Stripe billing.
+* Researching consent-first architectures for personal AI agents — see [Publications](/publications/).
 
 Let's work together
 ------
-I'm based in Jersey City, NJ and open to hybrid or remote opportunities. Reach out at [kandulacharanraj@gmail.com](mailto:kandulacharanraj@gmail.com) or connect on [LinkedIn](https://linkedin.com/in/kandula-charan-raj). You can dive deeper into my background on the [experience page](/cv/) or explore recent [projects](/portfolio/).
+I'm based in Jersey City, NJ. Reach me at [kandulacharanraj@gmail.com](mailto:kandulacharanraj@gmail.com) or on [LinkedIn](https://www.linkedin.com/in/kandula-charan-raj). More detail on the [experience page](/cv/), and code on [GitHub](https://github.com/rajkandula).
