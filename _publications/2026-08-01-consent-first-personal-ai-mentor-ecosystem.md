@@ -1,7 +1,7 @@
 ---
 title: "A Consent-First Personal AI Mentor Ecosystem: A Multi-Agent Framework for Lifelong Learning, Wellbeing, and Human Flourishing"
 collection: publications
-permalink: /publication/2026-08-01-consent-first-personal-ai-mentor-ecosystem
+permalink: /publication/2026-08-01-consent-first-personal-ai-mentor-ecosystem/
 excerpt: 'A framework paper arguing that consent is not a constraint on society-scale AI mentorship systems but the mechanism that makes them effective. Proposes a two-tier architecture of individually owned Personal Mentor Agents and consent-scoped Institutional Coordinator Agents.'
 date: 2026-08-01
 venue: 'Preprint'
