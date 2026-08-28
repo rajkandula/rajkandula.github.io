@@ -42,7 +42,7 @@
 <body>
 <header class="nav">
   <nav class="wrap nav__in" aria-label="Main">
-    <a class="nav__brand" href="{{ '/' | relative_url }}">{{ site.data.content.profile.name }}</a>
+    <a class="nav__brand" href="{{ '/' | relative_url }}"><span class="nav__brand--full">{{ site.data.content.profile.name }}</span><span class="nav__brand--short">CRK</span></a>
     <div class="nav__links">
       {% assign navs = "/,Home|/portfolio/,Projects|/cv/,Experience|/publications/,Writing" | split: "|" %}
       {% for n in navs %}
