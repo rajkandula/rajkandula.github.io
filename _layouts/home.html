@@ -79,9 +79,10 @@ layout: base
     <div class="grid grid--3">
       {% for p in c.projects %}{% if p.featured %}
       <article class="card proj">
-        <div class="proj__top"><h3>{{ p.name }}</h3></div>
+        <div class="proj__top"><h3>{% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</h3></div>
         <p>{{ p.blurb }}</p>
         <div class="tags">{% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>
+        {% if p.url %}<a class="proj__link" href="{{ p.url }}" target="_blank" rel="noopener">{{ p.link_label | default: "Visit" }} {% include icon.html name="arrow" %}</a>{% endif %}
       </article>
       {% endif %}{% endfor %}
     </div>

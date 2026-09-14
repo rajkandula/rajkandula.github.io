@@ -218,6 +218,11 @@ button.vote:hover:not(:disabled) { border-color: var(--accent); color: var(--acc
 .votes--compact { margin: 14px 0 0; gap: 6px; }
 .votes--compact .vote { padding: 3px 9px; font-size: .8rem; cursor: inherit; }
 
+/* project links */
+.proj h3 a { color: inherit; }
+.proj h3 a:hover { color: var(--accent); text-decoration: none; }
+.proj__link { display: inline-flex; align-items: center; gap: 7px; margin-top: 14px; color: var(--accent); font-size: .9rem; font-weight: 560; }
+
 /* paper comments (giscus) */
 .comments { margin-top: 2.4em; }
 .comments__note { margin: 0 0 14px; font-size: .88rem; color: var(--text-muted); }

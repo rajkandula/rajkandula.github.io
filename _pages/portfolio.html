@@ -13,11 +13,12 @@ permalink: /portfolio/
     {% for p in c.projects %}
     <article class="card proj">
       <div class="proj__top">
-        <h3>{{ p.name }}</h3>
+        <h3>{% if p.url %}<a href="{{ p.url }}" target="_blank" rel="noopener">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %}</h3>
         {% if p.featured %}<span class="star">Featured</span>{% endif %}
       </div>
       <p>{{ p.blurb }}</p>
       <div class="tags">{% for t in p.tags %}<span class="tag">{{ t }}</span>{% endfor %}</div>
+      {% if p.url %}<a class="proj__link" href="{{ p.url }}" target="_blank" rel="noopener">{{ p.link_label | default: "Visit" }} {% include icon.html name="arrow" %}</a>{% endif %}
     </article>
     {% endfor %}
   </div>

@@ -96,33 +96,31 @@ education:
     period: "Jun 2016 — Oct 2020"
 
 projects:
-  - name: "MCP Security Gateway"
-    blurb: "Zero-trust access control for LLM agents. A centralized MCP proxy enforcing RBAC and OAuth2 scope verification on agent tool calls, with sandboxed execution in ephemeral Docker containers and Kafka-based audit logging."
-    tags: ["Python", "FastAPI", "Docker", "Kafka", "OAuth2"]
+  - name: "Harakumo"
+    url: "https://harakumo.com"
+    link_label: "harakumo.com"
+    blurb: "A developer cloud in one place — deployments, databases, storage, functions, vector collections, memory stores, AI agents, domains and payments, with an SDK, CLI and REST API."
+    tags: ["Next.js", "TypeScript", "Cloudflare Workers", "D1 · R2 · KV", "Stripe"]
     featured: true
-  - name: "AI Video Generation Pipeline"
-    blurb: "Automated documentary-style video production: GPT narration, TTS, Whisper subtitles, and programmatic stitching, with GCS storage and CI for reliability."
-    tags: ["Python", "OpenAI", "MoviePy", "GCP"]
+  - name: "SkolaOS"
+    url: "https://skolaos.com"
+    link_label: "skolaos.com"
+    blurb: "School management for Indian schools, Nursery to Class 12 — admissions, students, fees, attendance, exams, timetables and certificates as connected apps sharing one student record."
+    tags: ["Next.js", "TypeScript", "MongoDB", "Cloudflare Workers"]
     featured: true
-  - name: "ComicCraft"
-    blurb: "AI comic generation platform with auth, a credits and payments system, and DALL·E image synthesis. Deployed on Cloud Run and Vercel with GitHub Actions CI/CD."
-    tags: ["Next.js", "Node", "MongoDB", "GCP"]
+  - name: "Granzelo"
+    url: "https://granzelo.com"
+    link_label: "granzelo.com"
+    blurb: "Scheduling with payments built in — a Calendly alternative where clients pick a time and pay in the same step."
+    tags: ["Scheduling", "Payments", "SaaS"]
     featured: true
-  - name: "Medical Records Wallet"
-    blurb: "Patient-owned record storage with OCR search, time-limited shareable links, audit logs, encryption at rest, and role-based access on a HIPAA-aware design."
-    tags: ["MERN", "Object storage", "OCR"]
-  - name: "Personal Finance Tracker"
-    blurb: "Budgets, categories, recurring expenses, CSV import/export, and charts, with optimistic updates, pagination, JWT auth, and role-based access."
-    tags: ["Next.js", "TypeScript", "MongoDB", "TanStack Query"]
-  - name: "Job Application Tracker"
-    blurb: "Pipeline statuses, filtering and sort, CSV export, Server Actions for mutations, optimistic UI, keyboard shortcuts, and light/dark mode."
-    tags: ["Next.js", "TypeScript", "Zod", "Tailwind"]
-  - name: "Learning Management System"
-    blurb: "Led a team of 6 building an LMS serving 500+ students — REST backend, GridFS file storage, responsive UI, and ETL for student data."
-    tags: ["Node.js", "Express", "MongoDB", "GridFS"]
-  - name: "Notes & Kanban"
-    blurb: "Boards, columns, and cards with drag and drop, labels, search, pagination, role-based auth, rate limiting, tests, and admin metrics."
-    tags: ["React", "Node", "Express", "JWT"]
-  - name: "University Android App"
-    blurb: "Resume builder, GPA calculator, and cloud document storage. 10K+ installs at a 4.5-star rating, with ~50% engagement lift from UX and crash work."
-    tags: ["Java", "Firebase", "Material Design"]
+  - name: "ComicWrite"
+    url: "https://comicwrite.com"
+    link_label: "comicwrite.com"
+    blurb: "A writing studio for visual and long-form stories — comics, picture books, novels and screenplays."
+    tags: ["Writing tools", "Comics", "SaaS"]
+  - name: "SolarFlow"
+    url: "https://github.com/rajkandula/SolarFlow"
+    link_label: "View on GitHub"
+    blurb: "Sales-process software for solar teams, coordinating sales reps, clients, operations managers and construction crews from first contact to installation."
+    tags: ["JavaScript", "Handlebars"]
