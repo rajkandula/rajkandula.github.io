@@ -1,0 +1,19 @@
+{%- comment -%}
+Agree / disagree / like counts for a paper, stored in a public counter.
+Usage: {% include paper-votes.html key="paper-key" %}
+       {% include paper-votes.html key="paper-key" compact=true %}  (read-only, safe inside a link card)
+{%- endcomment -%}
+{%- if include.compact -%}
+<span class="votes votes--compact" data-votes="{{ include.key }}" data-readonly>
+  <span class="vote" data-kind="agree" title="Agree">👍 <span class="vote__count" data-count>–</span></span>
+  <span class="vote" data-kind="disagree" title="Disagree">👎 <span class="vote__count" data-count>–</span></span>
+  <span class="vote" data-kind="like" title="Like">❤️ <span class="vote__count" data-count>–</span></span>
+</span>
+{%- else -%}
+<div class="votes" data-votes="{{ include.key }}">
+  <button type="button" class="vote" data-kind="agree">👍 Agree <span class="vote__count" data-count>–</span></button>
+  <button type="button" class="vote" data-kind="disagree">👎 Disagree <span class="vote__count" data-count>–</span></button>
+  <button type="button" class="vote" data-kind="like">❤️ Like <span class="vote__count" data-count>–</span></button>
+  <span class="votes__status" data-vote-status>What do you think of this paper?</span>
+</div>
+{%- endif -%}

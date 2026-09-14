@@ -11,12 +11,27 @@ permalink: /publications/
   <div class="grid" style="margin-top:30px">
     {% assign pubs = site.publications | sort: "date" | reverse %}
     {% for pub in pubs %}
-    <a class="pub" href="{{ pub.url | relative_url }}">
+    {% assign vote_key = pub.votes_key | default: pub.slug %}
+    <article class="pub pub--static">
       <span class="pub__venue">{{ pub.venue }} · {{ pub.date | date: "%B %Y" }}</span>
-      <h3>{{ pub.title }}</h3>
+      <h3><a href="{{ pub.url | relative_url }}">{{ pub.title }}</a></h3>
       <p>{{ pub.excerpt | strip_html | truncate: 280 }}</p>
-      <span class="pub__more">Read more {% include icon.html name="arrow" %}</span>
-    </a>
+      {% include paper-votes.html key=vote_key %}
+      <div class="pub__actions">
+        <a class="pub__more" href="{{ pub.url | relative_url }}">Read more {% include icon.html name="arrow" %}</a>
+        {% if pub.paperurl %}
+        <button type="button" class="link-btn" data-preview-toggle="paper-preview-{{ forloop.index }}" aria-expanded="false">{% include icon.html name="doc" %} <span data-label>Preview paper</span></button>
+        <a class="link-btn" href="{{ pub.paperurl }}">Download PDF</a>
+        {% endif %}
+      </div>
+      {% if pub.paperurl %}
+      <div class="paper-preview" id="paper-preview-{{ forloop.index }}" data-src="{{ pub.paperurl }}#view=FitH" hidden>
+        <iframe title="Preview of {{ pub.title | escape }}"></iframe>
+        <p class="paper-preview__fallback">Preview not showing on your device? <a href="{{ pub.paperurl }}">Open the PDF</a>.</p>
+      </div>
+      {% endif %}
+    </article>
     {% endfor %}
   </div>
 </div>
+<script src="{{ '/assets/js/paper-votes.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

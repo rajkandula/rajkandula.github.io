@@ -97,15 +97,18 @@ layout: base
   <div class="wrap">
     <div class="section__head"><h2>Writing &amp; research</h2></div>
     {% for pub in pubs limit: 1 %}
+    {% assign vote_key = pub.votes_key | default: pub.slug %}
     <a class="pub" href="{{ pub.url | relative_url }}">
       <span class="pub__venue">{{ pub.venue }} · {{ pub.date | date: "%Y" }}</span>
       <h3>{{ pub.title }}</h3>
       <p>{{ pub.excerpt | strip_html | truncate: 240 }}</p>
-      <span class="pub__more">Read more {% include icon.html name="arrow" %}</span>
+      {% include paper-votes.html key=vote_key compact=true %}
+      <span class="pub__more">Read more &amp; preview {% include icon.html name="arrow" %}</span>
     </a>
     {% endfor %}
   </div>
 </section>
+<script src="{{ '/assets/js/paper-votes.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
 {% endif %}
 
 <section class="section">

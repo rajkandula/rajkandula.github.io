@@ -199,6 +199,29 @@ html[data-theme="dark"] .themebtn .ico--moon { display: none; }
 .pub h3 { margin: 9px 0 9px; font-size: 1.18rem; line-height: 1.35; }
 .pub p { color: var(--text-muted); font-size: .94rem; margin: 0; }
 .pub__more { display: inline-flex; align-items: center; gap: 7px; margin-top: 15px; color: var(--accent); font-size: .9rem; font-weight: 560; }
+.pub--static:hover { transform: none; box-shadow: none; border-color: var(--border); }
+.pub h3 a { color: inherit; }
+.pub__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; margin-top: 16px; }
+.pub__actions .pub__more { margin-top: 0; }
+.link-btn { display: inline-flex; align-items: center; gap: 7px; padding: 0; border: 0; background: none; font: inherit; font-size: .9rem; font-weight: 560; color: var(--accent); cursor: pointer; }
+button.btn { font: inherit; cursor: pointer; }
+
+/* paper reactions */
+.votes { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 14px 0 6px; }
+.vote { display: inline-flex; align-items: center; gap: 7px; padding: 6px 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: inherit; font: inherit; font-size: .88rem; font-weight: 560; cursor: pointer; transition: .15s; }
+button.vote:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.vote:disabled { cursor: default; }
+.vote.is-mine { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 16%, var(--surface)); color: var(--accent); }
+.vote__count { color: var(--text-muted); font-variant-numeric: tabular-nums; }
+.vote.is-mine .vote__count { color: inherit; }
+.votes__status { font-size: .84rem; color: var(--text-muted); }
+.votes--compact { margin: 14px 0 0; gap: 6px; }
+.votes--compact .vote { padding: 3px 9px; font-size: .8rem; cursor: inherit; }
+
+/* paper PDF preview */
+.paper-preview { margin-top: 18px; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); }
+.paper-preview iframe { display: block; width: 100%; height: min(80vh, 900px); border: 0; background: #fff; }
+.paper-preview__fallback { margin: 0; padding: 10px 14px; border-top: 1px solid var(--border); font-size: .85rem; color: var(--text-muted); }
 
 /* prose (markdown pages) */
 .prose { max-width: 74ch; }
