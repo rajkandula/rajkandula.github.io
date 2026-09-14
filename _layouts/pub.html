@@ -24,6 +24,7 @@ layout: base
     <h2>Citation</h2>
     <p style="color:var(--text-muted);font-size:.93rem">{{ page.citation }}</p>
     {% endif %}
+    {% include paper-comments.html %}
   </div>
 </div>
 <script src="{{ '/assets/js/paper-votes.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>

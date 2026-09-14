@@ -218,6 +218,10 @@ button.vote:hover:not(:disabled) { border-color: var(--accent); color: var(--acc
 .votes--compact { margin: 14px 0 0; gap: 6px; }
 .votes--compact .vote { padding: 3px 9px; font-size: .8rem; cursor: inherit; }
 
+/* paper comments (giscus) */
+.comments { margin-top: 2.4em; }
+.comments__note { margin: 0 0 14px; font-size: .88rem; color: var(--text-muted); }
+
 /* paper PDF preview */
 .paper-preview { margin-top: 18px; }
 .paper-preview__fallback { margin: 8px 2px 0; font-size: .82rem; color: var(--text-muted); }

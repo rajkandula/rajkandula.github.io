@@ -23,6 +23,7 @@ permalink: /publications/
         <button type="button" class="link-btn" data-preview-toggle="paper-preview-{{ forloop.index }}" aria-expanded="false">{% include icon.html name="doc" %} <span data-label>Preview paper</span></button>
         <a class="link-btn" href="{{ pub.paperurl }}">Download PDF</a>
         {% endif %}
+        <a class="link-btn" href="{{ pub.url | relative_url }}#comments">💬 Comments</a>
       </div>
       {% if pub.paperurl %}
       <div class="paper-preview" id="paper-preview-{{ forloop.index }}" hidden>

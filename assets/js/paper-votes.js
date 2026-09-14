@@ -1,14 +1,14 @@
 /*
- * Paper reactions and PDF preview.
+ * Paper likes and preview toggle.
  *
  * Counts live in Abacus (https://abacus.jasoncameron.dev), a free public
  * counter with CORS enabled — no backend needed on GitHub Pages. Each browser
- * gets one reaction per paper, remembered in localStorage.
+ * gets one like per paper, remembered in localStorage.
  */
 (function () {
   var API = "https://abacus.jasoncameron.dev";
   var NAMESPACE = "rajkandula-github-io";
-  var THANKS = "Thanks — your response is counted.";
+  var THANKS = "Thanks for the like!";
 
   function counterUrl(action, paper, kind) {
     return API + "/" + action + "/" + NAMESPACE + "/" + paper + "-" + kind;
