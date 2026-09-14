@@ -25,9 +25,9 @@ permalink: /publications/
         {% endif %}
       </div>
       {% if pub.paperurl %}
-      <div class="paper-preview" id="paper-preview-{{ forloop.index }}" data-src="{{ pub.paperurl }}#view=FitH" hidden>
-        <iframe title="Preview of {{ pub.title | escape }}"></iframe>
-        <p class="paper-preview__fallback">Preview not showing on your device? <a href="{{ pub.paperurl }}">Open the PDF</a>.</p>
+      <div class="paper-preview" id="paper-preview-{{ forloop.index }}" hidden>
+        <div class="pdfv" data-pdf="{{ pub.paperurl }}" aria-label="Preview of {{ pub.title | escape }}"></div>
+        <p class="paper-preview__fallback">Trouble viewing? <a href="{{ pub.paperurl }}">Open the PDF</a>.</p>
       </div>
       {% endif %}
     </article>
@@ -35,3 +35,4 @@ permalink: /publications/
   </div>
 </div>
 <script src="{{ '/assets/js/paper-votes.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
+<script src="{{ '/assets/js/paper-viewer.js' | relative_url }}?v={{ site.time | date: '%s' }}" defer></script>
